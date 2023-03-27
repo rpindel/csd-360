@@ -1,53 +1,68 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+  <style>
+    p {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <p> Original Wording: i + i % 3 / 7 - 2 + 7 ** 3 </p>
+  <p> Original Wording: i + i % 3 / 7 - 2 + 7 ** 3 = 1183.2857142857142 </p>
+  Calculated value: 
   <script>
     var i = 842;
     document.write(i + i % 3 / 7 - 2 + 7 ** 3);
   </script>
 
-  <p> DONE #1 Wording: (i + i) % 3 / 7 - 2 + 7 ** 3 </p>
+<br><br>
+  <p> #1 Wording: (i + i) % 3 / 7 - 2 + 7 ** 3 = 341.14285714285717 </p>
+  Calculated value: 
   <script>
     var i = 842;
     document.write((i + i) % 3 / 7 - 2 + 7 ** 3);
   </script>
 
-  <p> DONE #2 Wording: i + i % 3 / (7 - 2) + 7 ** 3 </p>
+  <br><br>
+  <p> #2 Wording: i + i % 3 / (7 - 2) + 7 ** 3 = 1185.4 </p>
+  Calculated value: 
   <script>
     var i = 842;
     document.write(i + i % 3 / (7 - 2) + 7 ** 3);
   </script>
 
-  <p> #3 Wording: i + i % 3 / 7 - 2 + 7 ** 3 </p>
+  <br><br>
+  <p> #3 Wording: i + i % 3 / (7 - 2 + 7) ** 3 = 842.0011574074074 </p>
+  Calculated value: 
   <script>
     var i = 842;
-    document.write(i + i % 3 / 7 - 2 + 7 ** 3);
+    document.write(842 + 842 % 3 / (7 - 2 + 7) ** 3);
   </script>
 
-  <p> DONE #4 Wording: i + i % 3 / 7 - (2 + 7) ** 3 </p>
+  <br><br>
+  <p> #4 Wording: i + i % 3 / 7 - (2 + 7) ** 3 = 113.28571428571433 </p>
+  Calculated value: 
   <script>
     var i = 842;
     document.write(i + i % 3 / 7 - (2 + 7) ** 3);
   </script>
 
-  <p> #5 Wording: i + i % 3 / 7 - 2 + 7 ** 3 </p>
+  <br><br>
+  <p> #5 Wording: (i + i) % 3 / (7 - 2) + 7 ** 3 = 343.2 </p>
+  Calculated value: 
   <script>
     var i = 842;
-    document.write(i + i % 3 / 7 - 2 + 7 ** 3);
+    document.write((i + i) % 3 / (7 - 2) + 7 ** 3);
   </script>
 
-  <p> #6 Wording: i + i % 3 / 7 - 2 + 7 ** 3 </p>
+  <br><br>
+  <p> #6 Wording: i + i % 3 / (7 - (2 + 7)) ** 3 = 841.75  </p>
+  Calculated value: 
   <script>
     var i = 842;
-    document.write(i + i % 3 / 7 - 2 + 7 ** 3);
+    document.write(842 + 842 % 3 / (7 - (2 + 7)) ** 3);
   </script>
 
-<p> WORKING SPACE: i + i % 3 / 7 - 2 + 7 ** 3 </p>
-<script>
-  document.write(842 + 842 % 3 / 7 - 2 + 7 ** 3);
-</script>
 </body>
 </html>
+
