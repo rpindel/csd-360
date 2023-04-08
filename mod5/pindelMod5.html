@@ -14,7 +14,6 @@ Module 5 Programming Assignment
   </style>
 </head>
 <body>
-  <!-- Start of script code from Blackboard -->
   <script type = "text/javascript">
     function rollDice(){
       document.form1.dice1.value = Math.floor((Math.random() * 6) + 1);
@@ -23,7 +22,6 @@ Module 5 Programming Assignment
       parseInt(document.form1.dice2.value);
       var total = parseInt(document.form1.dice1.value) +
       parseInt(document.form1.dice2.value);
-      <!-- Start of assignment code addition --> 
       switch(total){ 
         case 2:
           document.form1.total.value = "Snake Eyes";
@@ -38,7 +36,6 @@ Module 5 Programming Assignment
           document.form1.total.value = "You Win";
           break;
       }
-      <!-- End of assignment code addition -->
     }
   </script>
   <form name='form1'>
@@ -56,7 +53,6 @@ Module 5 Programming Assignment
     <br>
     <input type='button' name='button5' value='Reset' onclick='reset()' />
   </form>
-  <!-- End of script code from Blackboard -->
   <br>
   <div>
     <a href="..\index.html">Back to Landing Page</a>
