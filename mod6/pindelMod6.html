@@ -1,0 +1,40 @@
+<!--
+Robin Pindel
+Module 6 Programming Assignment
+4/10/2023
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <style>
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>The First 30 Fibonacci Numbers</h1>
+  <script>
+    var first = 1;
+    var second = 1;
+    var counter;
+    var total;
+    document.write("1 - " + first);
+    document.write("<br>");
+    document.write("2 - " + second);
+    for (counter = 3; counter <= 30; counter++) {
+      document.write("<br>");
+      total = first + second;
+      document.write(counter + " - " + total);
+      first = second;
+      second = total;
+    }
+  </script>
+  <br>
+  <br>
+  <div>
+    <a href="..\index.html">Back to Landing Page</a>
+  </div>
+</body>
+</html>
