@@ -1,0 +1,40 @@
+<!--
+Robin Pindel
+Module 7 Programming Assignment
+4/19/2023
+
+This script displays...
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <style>
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sports Teams Array</h1>
+  <script>
+    var myArray = ["A","B","C","D","E","F","G","H","I","J"];
+    document.write("myArray forward (original order) : ")
+    for (var i = 0; i < myArray.length; i++) {
+      document.write(myArray[i] + " ");
+    }
+    myArray.reverse();
+    document.write("<br>");
+    document.write("<br>");
+    document.write("myArray backwards (reverse order) : ")
+    for (var i = 0; i < myArray.length; i++) {
+      document.write(myArray[i] + " ");
+    }
+  </script>
+  <br>
+  <br>
+  <div>
+    <a href="..\index.html">Back to Landing Page</a>
+  </div>
+</body>
+</html>
