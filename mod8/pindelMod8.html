@@ -3,8 +3,7 @@ Robin Pindel
 Module 8 Programming Assignment
 4/19/2023
 
-This script displays...
-
+This script displays a table of values 4-14 and then various mathetical operations regarding them, via loop oteration.
 -->
 
 <!DOCTYPE html>
@@ -13,6 +12,10 @@ This script displays...
   <style>
     p {
       font-weight: bold;
+    }
+
+    h1 {
+      font-style: italic;     
     }
 
     table, th, td {
@@ -26,10 +29,15 @@ This script displays...
     td {
       text-align: center;
     }
+
+    tr:nth-child(odd) {
+      background-color: lightgrey;
+    }
   </style>
 </head>
 <body>
-  <h1>Numbers Table 4 - 14</h1>
+  <h1>Display Table Containing the Values Using Loop Iteration (4 - 14)</h1>
+  <!-- Create numbers table framework -->
   <table id="myTable">
     <th>Initial Value</th>
     <th>Square Root</th>
@@ -72,6 +80,7 @@ This script displays...
   <script>
     var table = document.getElementById('myTable');
 
+    <!-- Loop iteration through table for square root, power of 2, and power of 3 calculations -->
     for (i = 1; i < (table.rows.length); i++) {
       
       table.rows[i].cells[1].innerHTML = Math.sqrt(table.rows[i].cells[0].innerText).toFixed(2);
