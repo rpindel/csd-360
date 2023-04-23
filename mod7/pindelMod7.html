@@ -3,7 +3,7 @@ Robin Pindel
 Module 7 Programming Assignment
 4/19/2023
 
-This script displays...
+This script displays a list of 10 sports teams in the original array order, reverses the array, and then displays the team names in reverse order
 -->
 
 <!DOCTYPE html>
@@ -18,14 +18,29 @@ This script displays...
 <body>
   <h1>Sports Teams Array</h1>
   <script>
-    var myArray = ["A","B","C","D","E","F","G","H","I","J"];
+    <!-- Create array -->
+    var myArray = [
+      "Hotspurs",
+      "Crystal Palace",
+      "Packers",
+      "Badgers",
+      "Brewers",
+      "Admirals",
+      "Shrimp",
+      "Knights",
+      "Cannoneers",
+      "Zanarkand"
+    ];
+    <!-- Display array original order -->
     document.write("myArray forward (original order) : ")
     for (var i = 0; i < myArray.length; i++) {
       document.write(myArray[i] + " ");
     }
+    
     myArray.reverse();
     document.write("<br>");
     document.write("<br>");
+    <!-- Display array in reverse order -->
     document.write("myArray backwards (reverse order) : ")
     for (var i = 0; i < myArray.length; i++) {
       document.write(myArray[i] + " ");
