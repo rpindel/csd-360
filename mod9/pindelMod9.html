@@ -1,0 +1,64 @@
+<!--
+Robin Pindel
+Module 8 Programming Assignment
+4/19/2023
+
+This script displays a table of values 4-14 and then various mathetical operations regarding them, via loop oteration.
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <style>
+    p {
+      font-weight: bold;
+    }
+</style>
+</head>
+<body>
+  <h1>Array Function Assignment</h1>
+  </table>
+  <script>
+    function Counter(array) {
+      var negative = 0;
+      var zero = 0;
+      var positive = 0;
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] < 0) {
+          negative++;
+        }
+        else if (array[i] == 0) {
+          zero++;
+        }
+        else {
+          positive++;
+        }
+      }
+      const returnArray = [];
+      returnArray.push(negative);
+      returnArray.push(zero);
+      returnArray.push(positive);
+      return returnArray;
+    }
+    const testArray = [-2, -1, 0, 1, 2, 3];
+    document.write("Test array: " + testArray);
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Quantity of negative values in test array: ");
+    document.write(Counter(testArray)[0]);
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Quantity of zero values in test array: ");
+    document.write(Counter(testArray)[1]);
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Quantity of positive values in test array: ");
+    document.write(Counter(testArray)[2]);    
+  </script>
+  <br>
+  <br>
+  <div>
+    <a href="..\index.html">Back to Landing Page</a>
+  </div>
+</body>
+</html>
