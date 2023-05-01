@@ -1,9 +1,9 @@
 <!--
 Robin Pindel
-Module 8 Programming Assignment
-4/19/2023
+Module 9 Programming Assignment
+4/30/2023
 
-This script displays a table of values 4-14 and then various mathetical operations regarding them, via loop oteration.
+This script presents an array of numbers and then determines if they are negative, zero, or positive.
 -->
 
 <!DOCTYPE html>
@@ -19,6 +19,7 @@ This script displays a table of values 4-14 and then various mathetical operatio
   <h1>Array Function Assignment</h1>
   </table>
   <script>
+    <!-- Main function -->
     function Counter(array) {
       var negative = 0;
       var zero = 0;
@@ -34,12 +35,15 @@ This script displays a table of values 4-14 and then various mathetical operatio
           positive++;
         }
       }
+      <!-- Create array for return count values -->
       const returnArray = [];
       returnArray.push(negative);
       returnArray.push(zero);
       returnArray.push(positive);
       return returnArray;
     }
+    
+    <!-- Create test array of values -->
     const testArray = [-2, -1, 0, 1, 2, 3];
     document.write("Test array: " + testArray);
     document.write("<br>");
