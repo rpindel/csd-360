@@ -1,0 +1,72 @@
+<!--
+Robin Pindel
+Module 10 Programming Assignment
+5/2/2023
+
+This program updates html elements when buttons are pressed.
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <link rel="stylesheet" href="pindelMod10.css"
+</head>
+<body>
+  <h1>Pokemon Attack-Type Effectiveness Against Charmander</h1>
+  <div id="top">
+    <img src="images/375px-0004Charmander.png" alt="Image of the pokemon Charmander">
+  </div top>
+  <div id="middle">
+    <h2>Attack-Type Effectiveness is...</h2>
+    <h3 id="attackText"></h3>
+  </div middle>
+  <div id="bottom1" onmouseout="clear()">
+    <button type="button" id="water" onclick="attack(water)">
+      Water Attack</button>
+    <button type="button" id="normal" onclick="attack(normal)">
+     Normal Attack</button>
+    <button type="button" id="grass" onclick="attack(grass)">
+      Grass Attack</button>
+  </div bottom1>
+  <div id="bottom2">
+    <button type="button" id="reset" onclick="attack(reset)">
+    Reset</button>
+  </div>
+  <script>
+
+    function attack(type) {
+      switch(type) {
+        case water:
+          document.getElementById("attackText").innerHTML = "Super Effecitve";
+          document.getElementById("attackText").style.fontWeight = "bold";
+          document.getElementById("attackText").style.fontStyle = "normal";
+          document.getElementById("attackText").style.color = "green"; 
+          break;
+        case normal:
+          document.getElementById("attackText").innerHTML = "Neutral";
+          document.getElementById("attackText").style.fontWeight = "normal";
+          document.getElementById("attackText").style.fontStyle = "normal";
+          document.getElementById("attackText").style.color = "black"; 
+          break;
+        case grass:
+          document.getElementById("attackText").innerHTML = "Resisted";
+          document.getElementById("attackText").style.fontWeight = "normal";
+          document.getElementById("attackText").style.fontStyle = "italic";
+          document.getElementById("attackText").style.color = "red"; 
+          break;
+        case reset:
+        document.getElementById("attackText").innerHTML = "";
+          document.getElementById("attackText").style.fontWeight = "";
+          document.getElementById("attackText").style.fontStyle = "";
+          document.getElementById("attackText").style.color = ""; 
+
+      }
+    }
+  </script>
+  <br>
+  <br>
+  <div>
+    <a href="..\index.html">Back to Landing Page</a>
+  </div>
+</body>
+</html>
