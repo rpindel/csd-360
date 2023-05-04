@@ -14,25 +14,35 @@ This program updates html elements when buttons are pressed.
 <body>
   <h1>Pokemon Attack-Type Effectiveness Against Charmander</h1>
   <div id="top">
-    <img src="images/375px-0004Charmander.png" alt="Image of the pokemon Charmander">
+    <img id="char" src="images/375px-0004Charmander.png" alt="Image of the pokemon Charmander">
   </div top>
   <div id="middle">
     <h2>Attack-Type Effectiveness is...</h2>
-    <h3 id="attackText"></h3>
+    <h3 id="attackText">_</h3>
   </div middle>
-  <div id="bottom1" onmouseout="clear()">
+  <div id="bottom" onmouseout="clear()">
     <button type="button" id="water" onclick="attack(water)">
       Water Attack</button>
     <button type="button" id="normal" onclick="attack(normal)">
      Normal Attack</button>
     <button type="button" id="grass" onclick="attack(grass)">
       Grass Attack</button>
-  </div bottom1>
-  <div id="bottom2">
-    <button type="button" id="reset" onclick="attack(reset)">
-    Reset</button>
-  </div>
+    </div bottom>
   <script>
+
+    document.getElementById("water").addEventListener("mouseover", function() {attack(water)});
+    document.getElementById("normal").addEventListener("mouseover", function() {attack(normal)});
+    document.getElementById("grass").addEventListener("mouseover", function() {attack(grass)});
+    document.getElementById("water").addEventListener("mouseout", reset);
+    document.getElementById("normal").addEventListener("mouseout", reset);
+    document.getElementById("grass").addEventListener("mouseout", reset);
+
+    function reset() {
+      document.getElementById("attackText").innerHTML = "_";
+      document.getElementById("attackText").style.fontWeight = "";
+      document.getElementById("attackText").style.fontStyle = "";
+      document.getElementById("attackText").style.color = ""; 
+    }
 
     function attack(type) {
       switch(type) {
@@ -54,12 +64,6 @@ This program updates html elements when buttons are pressed.
           document.getElementById("attackText").style.fontStyle = "italic";
           document.getElementById("attackText").style.color = "red"; 
           break;
-        case reset:
-        document.getElementById("attackText").innerHTML = "";
-          document.getElementById("attackText").style.fontWeight = "";
-          document.getElementById("attackText").style.fontStyle = "";
-          document.getElementById("attackText").style.color = ""; 
-
       }
     }
   </script>

@@ -5,6 +5,7 @@ h1, h2 {
 }
 
 h3 {
+  color: white;
   text-align: center;
 }
 
@@ -13,7 +14,7 @@ img {
   margin: 0 auto 0 auto;
 }
 
-#bottom1, #bottom2 {
+#bottom {
   display: flex;
   justify-content: center;
 }
