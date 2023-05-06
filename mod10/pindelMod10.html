@@ -3,7 +3,7 @@ Robin Pindel
 Module 10 Programming Assignment
 5/2/2023
 
-This program updates html elements when buttons are pressed.
+This program updates a p html element for when buttons are interacted with.
 -->
 
 <!DOCTYPE html>
@@ -12,13 +12,13 @@ This program updates html elements when buttons are pressed.
   <link rel="stylesheet" href="pindelMod10.css"
 </head>
 <body>
-  <h1>Pokemon Attack-Type Effectiveness Against Charmander</h1>
+  <h1>Pokemon Attack Type Effectiveness Against Charmander</h1>
   <div id="top">
     <a href="https://bulbapedia.bulbagarden.net/wiki/Charmander_(Pok%C3%A9mon)"><img id="char" src="images/375px-0004Charmander.png" alt="Image of the pokemon Charmander"></a>
   </div top>
   <div id="middle">
-    <h2>Attack-Type Effectiveness is...</h2>
-    <h3 id="attackText">_</h3>
+    <h2>Attack Type Effectiveness is...</h2>
+    <p id="attackText">Hover below to learn about that attack type versus Charmander</p>
   </div middle>
   <div id="bottom" onmouseout="clear()">
     <button type="button" id="water" onclick="attack(water)">
@@ -30,6 +30,7 @@ This program updates html elements when buttons are pressed.
     </div bottom>
   <script>
 
+    <!-- Define mouse action events -->
     document.getElementById("water").addEventListener("mouseover", function() {attack(water)});
     document.getElementById("normal").addEventListener("mouseover", function() {attack(normal)});
     document.getElementById("grass").addEventListener("mouseover", function() {attack(grass)});
@@ -37,13 +38,15 @@ This program updates html elements when buttons are pressed.
     document.getElementById("normal").addEventListener("mouseout", reset);
     document.getElementById("grass").addEventListener("mouseout", reset);
 
+    <!-- Resets p element to original state -->
     function reset() {
-      document.getElementById("attackText").innerHTML = "_";
+      document.getElementById("attackText").innerHTML = "Hover below to learn about that attack type versus Charmander";
       document.getElementById("attackText").style.fontWeight = "";
       document.getElementById("attackText").style.fontStyle = "";
       document.getElementById("attackText").style.color = ""; 
     }
 
+    <!-- Define how the p element will change  -->
     function attack(type) {
       switch(type) {
         case water:
