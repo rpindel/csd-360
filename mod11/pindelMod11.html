@@ -11,43 +11,37 @@ This program updates a DOM element based on a user mouseclick event.
 <head>
   <link rel="stylesheet" href="pindelMod11.css">
   <script>
-    function displayEvo1() {
-      document.getElementById("egg").src = "./images/evo1.png";
-      document.getElementById("name").innerHTML = "Fuecoco";
+    
+    function hatch() {
+      var currentImg = document.getElementById("pokemon");
+      if (currentImg.src.match("./images/egg.jpg")) {
+        currentImg.src = "./images/evo1.png";
+        document.getElementById("name").innerHTML = "Fuecoco";
+      }
+      else if (currentImg.src.match("./images/evo1.png")) {
+        currentImg.src = "./images/evo2.jpg";
+        document.getElementById("name").innerHTML = "Crocalor";
+      }
+      else if (currentImg.src.match("./images/evo2.jpg")) {
+        currentImg.src = "./images/evo3.jpg";
+        document.getElementById("name").innerHTML = "Skeledirge";
+      }
+      else {
+        currentImg.src = "./images/egg.jpg";
+        document.getElementById("name").innerHTML = "Egg";
+      }
     }
-    function displayEvo2() {
-      document.getElementById("egg").src = "./images/evo2.jpg";
-      document.getElementById("name").innerHTML = "Crocalor";
-    }
-    function displayEvo3() {
-      document.getElementById("egg").src = "./images/evo3.jpg";
-      document.getElementById("name").innerHTML = "Skeledirge";
-    }
-    function reset() {
-      document.getElementById("egg").src = "./images/egg.jpg";
-      document.getElementById("name").innerHTML = "Egg";
-    }
+
   </script>
 </head>
 <body>
   <div>
-    <img src="./images/egg.jpg" id="egg" width="300" height="300">
+    <img src="./images/egg.jpg" id="pokemon" width="300" height="300" onclick="hatch()">
     <h3 id="name">Egg</h3>
   </div>
   <div>
     <h1>Pokemon evolutions, who will we hatch?</h1>
-  </div>
-  <div>
-    <button type="button" id="Evo1" onclick="displayEvo1()">
-      Evolution Stage: 1</button>
-    <button type="button" id="Evo2" onclick="displayEvo2()">
-      Evolution Stage: 2</button>
-    <button type="button" id="Evo3" onclick="displayEvo3()">
-      Evolution Stage: 3</button>
-  </div>
-  <div>
-    <button type="button" id="reset" onclick="reset()">
-      Reset </button>
+    <h3>Click to find out!</h3>
   </div>
 </body>
 </html>
