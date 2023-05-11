@@ -1,0 +1,53 @@
+<!--
+Robin Pindel
+Module 11 Programming Assignment
+5/10/2023
+
+This program updates a DOM element based on a user mouseclick event.
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <link rel="stylesheet" href="pindelMod11.css">
+  <script>
+    function displayEvo1() {
+      document.getElementById("egg").src = "./images/evo1.png";
+      document.getElementById("name").innerHTML = "Fuecoco";
+    }
+    function displayEvo2() {
+      document.getElementById("egg").src = "./images/evo2.jpg";
+      document.getElementById("name").innerHTML = "Crocalor";
+    }
+    function displayEvo3() {
+      document.getElementById("egg").src = "./images/evo3.jpg";
+      document.getElementById("name").innerHTML = "Skeledirge";
+    }
+    function reset() {
+      document.getElementById("egg").src = "./images/egg.jpg";
+      document.getElementById("name").innerHTML = "Egg";
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <img src="./images/egg.jpg" id="egg" width="300" height="300">
+    <h3 id="name">Egg</h3>
+  </div>
+  <div>
+    <h1>Pokemon evolutions, who will we hatch?</h1>
+  </div>
+  <div>
+    <button type="button" id="Evo1" onclick="displayEvo1()">
+      Evolution Stage: 1</button>
+    <button type="button" id="Evo2" onclick="displayEvo2()">
+      Evolution Stage: 2</button>
+    <button type="button" id="Evo3" onclick="displayEvo3()">
+      Evolution Stage: 3</button>
+  </div>
+  <div>
+    <button type="button" id="reset" onclick="reset()">
+      Reset </button>
+  </div>
+</body>
+</html>
