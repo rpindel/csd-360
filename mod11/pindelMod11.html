@@ -14,21 +14,35 @@ This program updates a DOM element based on a user mouseclick event.
     
     function hatch() {
       var currentImg = document.getElementById("pokemon");
-      if (currentImg.src.match("./images/egg.jpg")) {
+      if (currentImg.src.match("./images/egg1.jpg")) {
+        currentImg.src = "./images/egg2.jpg";
+        document.getElementById("name").innerHTML = "Crack";
+        document.getElementById("stage").innerHTML = "Stage 0";
+      }
+      else if (currentImg.src.match("./images/egg2.jpg")) {
+        currentImg.src = "./images/egg3.jpg";
+        document.getElementById("name").innerHTML = "Craaaacccckkkkkk";
+        document.getElementById("stage").innerHTML = "Stage 0";
+      }
+      else if (currentImg.src.match("./images/egg3.jpg")) {
         currentImg.src = "./images/evo1.png";
         document.getElementById("name").innerHTML = "Fuecoco";
+        document.getElementById("stage").innerHTML = "Stage 1";
       }
       else if (currentImg.src.match("./images/evo1.png")) {
         currentImg.src = "./images/evo2.jpg";
         document.getElementById("name").innerHTML = "Crocalor";
+        document.getElementById("stage").innerHTML = "Stage 2";
       }
       else if (currentImg.src.match("./images/evo2.jpg")) {
         currentImg.src = "./images/evo3.jpg";
         document.getElementById("name").innerHTML = "Skeledirge";
+        document.getElementById("stage").innerHTML = "Stage 3";
       }
       else {
-        currentImg.src = "./images/egg.jpg";
+        currentImg.src = "./images/egg1.jpg";
         document.getElementById("name").innerHTML = "Egg";
+        document.getElementById("stage").innerHTML = "Stage 0";
       }
     }
 
@@ -36,12 +50,13 @@ This program updates a DOM element based on a user mouseclick event.
 </head>
 <body>
   <div>
-    <img src="./images/egg.jpg" id="pokemon" width="300" height="300" onclick="hatch()">
+    <img src="./images/egg1.jpg" id="pokemon" width="300" height="300" onclick="hatch()">
     <h3 id="name">Egg</h3>
+    <h3 id="stage">Stage 0</h3>
   </div>
   <div>
-    <h1>Pokemon evolutions, who will we hatch?</h1>
-    <h3>Click to find out!</h3>
+    <h1 id="title">Pokemon evolutions, who will we hatch?</h1>
+    <h3 id="subtitle">Click to find out!</h3>
   </div>
 </body>
 </html>
